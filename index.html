@@ -2,6 +2,7 @@
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <head>
     <title>My Portfolio</title>
@@ -290,6 +291,42 @@
         font-size: 0.9rem;
     }
 
+    /* SKILLS GRID */
+    .skills-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    /* SKILL CARD */
+    .skill {
+        background: rgba(30, 41, 59, 0.6);
+        border-radius: 10px;
+        padding: 20px;
+        text-align: center;
+        transition: 0.3s;
+        border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .skill:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(56, 189, 248, 0.2);
+    }
+
+    /* ICON */
+    .skill i {
+        font-size: 30px;
+        margin-bottom: 10px;
+        color: #38bdf8;
+    }
+
+    /* TEXT */
+    .skill span {
+        display: block;
+        font-size: 0.9rem;
+    }
+
     /* CONTACT */
     .contact {
         text-align: center;
@@ -325,6 +362,36 @@
         }
 
     }
+
+    @media (max-width: 600px) {
+
+        .hero h1 {
+            font-size: 1.8rem;
+        }
+
+        .tagline {
+            font-size: 0.9rem;
+        }
+
+        .profile-img {
+            width: 110px;
+            height: 110px;
+        }
+
+        .projects-container {
+            grid-template-columns: 1fr;
+        }
+
+        .skills-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+    }
+
+    .skill:hover i {
+        transform: scale(1.2);
+        transition: 0.3s;
+    }
 </style>
 
 <body>
@@ -334,7 +401,7 @@
         <h1>Hello, I'm Tushar 👋</h1>
         <p class="tagline">Full Stack Developer (React | Angular | Node.js | MongoDB)</p>
     </header>
-
+    <hr style="border: none; height: 1px; background: #1e293b;">
     <section class="about">
         <h2>About Me</h2>
         <p>
@@ -363,23 +430,59 @@
                 <div class="project-content">
                     <h3>School Management App</h3>
                     <p>Manage students, attendance, and admin operations.</p>
-                    <a href="#" onclick="showMessage()" >View Project</a>
+                    <a href="#" onclick="showMessage()">View Project</a>
                 </div>
             </div>
 
         </div>
     </section>
     <hr style="border: none; height: 1px; background: #1e293b;">
+
     <section class="skills">
         <h2>Skills</h2>
-        <div class="skills-list">
-            <span>Angular</span>
-            <span>React</span>
-            <span>Node.js</span>
-            <span>Express</span>
-            <span>MongoDB</span>
-            <span>JavaScript</span>
-            <span>HTML/CSS</span>
+
+        <div class="skills-grid">
+
+            <div class="skill">
+                <i class="fa-brands fa-angular"></i>
+                <span>Angular</span>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-react"></i>
+                <span>React</span>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-node-js"></i>
+                <span>Node.js</span>
+            </div>
+
+            <div class="skill">
+                <i class="fa-solid fa-server"></i>
+                <span>Express</span>
+            </div>
+
+            <div class="skill">
+                <i class="fa-solid fa-database"></i>
+                <span>MongoDB</span>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-js"></i>
+                <span>JavaScript</span>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-html5"></i>
+                <span>HTML</span>
+            </div>
+
+            <div class="skill">
+                <i class="fa-brands fa-css3-alt"></i>
+                <span>CSS</span>
+            </div>
+
         </div>
     </section>
     <hr style="border: none; height: 1px; background: #1e293b;">
@@ -399,9 +502,28 @@
     <script id="u7k3pq">
         function showMessage() {
             alert("Live demo is currently restricted. Contact me for access.");
+            // <p style="color: orange;">⚠️ Demo restricted (API limitation)</p>
         }
     </script>
 
 </body>
 
 </html>
+
+
+
+
+
+<!-- recycle bin -->
+<!-- <section class="skills">
+        <h2>Skills</h2>
+        <div class="skills-list">
+            <span>Angular</span>
+            <span>React</span>
+            <span>Node.js</span>
+            <span>Express</span>
+            <span>MongoDB</span>
+            <span>JavaScript</span>
+            <span>HTML/CSS</span>
+        </div>
+    </section> -->
